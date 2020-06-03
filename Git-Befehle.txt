@@ -31,3 +31,10 @@ git push origin/<branch> (z.B. origin/master) - Änderungen an das Online-Reposi
 git fetch origin 
 git merge origin/<branch> (z.B. origin/master) - Änderungen aus dem Online-Repository holen
 git pull (git fetch + git merge)
+
+
+Hinweise:
+Mit dem Befehl git rm geheim.jpg wird die Datei auch aus dem Arbeitsverzeichnis entfernt, also gelöscht.
+Um die Datei aus der Versionsverwaltung zu entfernen, aber auf der Festplatte zu behalten nutzt man git rm --cached geheim.jpg.
+
+Falls die Datei nur aus der Staging Area entfernt werden soll, nutzt man git reset HEAD -- geheim.jpg
