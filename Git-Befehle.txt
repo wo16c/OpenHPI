@@ -1,0 +1,12 @@
+pwd - print working directory
+cd change directory
+ls list
+
+git config --list
+git config -- global user.email
+git config -- global user.name
+
+
+cd ~ - Heimatvertzeichnis
+
+git init - erstellt GIT-Repository
