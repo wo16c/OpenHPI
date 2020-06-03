@@ -2,11 +2,16 @@ pwd - print working directory
 cd change directory
 ls list
 
-git config --list
-git config -- global user.email
-git config -- global user.name
+git config --list - GIT Konfigurationsdatei anzeigen
+git config -- global user.email - Email in Konfigurationsdatei setzen
+git config -- global user.name - -User Name in Konfigurationsdatei setzen
 
 
-cd ~ - Heimatvertzeichnis
+cd ~ - Heimatverzeichnis
 
 git init - erstellt GIT-Repository
+git status - Status des Repository anzeigen
+git add . - alle Dateien zum Repository hinzufügen
+git add dateiname.endung - definierte Datei zum Index hinzufügen
+git commit -m "Kommentar" - Änderungen am Repository aufzeigen
+
