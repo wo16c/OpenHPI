@@ -28,7 +28,7 @@ git clone <url> <alias> (z.B. https://github.com/repo repo) - Vollständige Kopi
 Änderungen am Repository Online weiterleiten
 git push origin/<branch> (z.B. origin/master) - Änderungen an das Online-Repository schicken
 
-Änderungen aus dem Repository Online holen
+Änderungen aus dem Online-Repository holen
 git fetch origin 
 git merge origin/<branch> (z.B. origin/master) - Änderungen aus dem Online-Repository holen
 git pull (git fetch + git merge)
