@@ -20,6 +20,7 @@ Repository Online stellen
 git remote add <alias> <url>(z.B. add repo http://github.copm/repo) - Repository online stellen
 git remote rename <alias> <neuer alias> (z.B. repo projekt1) - Repository umbenennen 
 git remote rm <alias> (rm = remove; entfernen) - Repsoitory entfernen
+git remote rm -f (-f = force - Löschen erzwingen)
 
 Respository zum bearbeiten "holen"
 git clone <url> <alias> (z.B. https://github.com/repo repo) - Vollständige Kopie fastaller Dateien
