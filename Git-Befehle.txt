@@ -1,17 +1,26 @@
+Verzeichnis-Befehle in GIT
 pwd - print working directory
 cd change directory
 ls list
+cd ~ - Heimatverzeichnis
 
+GIT Konfigurationsdatei ansehen, anpassen
 git config --list - GIT Konfigurationsdatei anzeigen
 git config -- global user.email - Email in Konfigurationsdatei setzen
 git config -- global user.name - -User Name in Konfigurationsdatei setzen
 
-
-cd ~ - Heimatverzeichnis
-
+Repositorys erstellen und Dateien verwalten
 git init - erstellt GIT-Repository
 git status - Status des Repository anzeigen
 git add . - alle Dateien zum Repository hinzufügen
 git add dateiname.endung - definierte Datei zum Index hinzufügen
 git commit -m "Kommentar" - Änderungen am Repository aufzeigen
+
+Repository Online stellen
+git remote add <alias> <url>(z.B. add repo http://github.copm/repo) - Repository online stellen
+git remote rename <alias> <neuer alias> (z.B. repo projekt1) - Repository umbenennen 
+git remote rm <alias> (rm = remove; entfernen) - Repsoitory entfernen
+
+Respository zum bearbeiten "holen"
+git clone <url> <alias> (z.B. https://github.com/repo repo) - Vollständige Kopie fastaller Dateien
 
