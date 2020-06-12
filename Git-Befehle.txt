@@ -1,4 +1,5 @@
-Verzeichnis-Befehle in GIT
+Verzeichnis-Befehle in GIT V.8
+
 pwd - print working directory
 cd change directory
 ls list
@@ -39,3 +40,11 @@ Mit dem Befehl git rm geheim.jpg wird die Datei auch aus dem Arbeitsverzeichnis 
 Um die Datei aus der Versionsverwaltung zu entfernen, aber auf der Festplatte zu behalten nutzt man git rm --cached geheim.jpg.
 
 Falls die Datei nur aus der Staging Area entfernt werden soll, nutzt man git reset HEAD -- geheim.jpg
+
+Branches und HEADS
+git branch <name> erstellen einer neuen branch
+git checkout <branchname> Wechsel des HEAD auf einen anderen Branch
+-> git checkout -b <branchname> Neuanlage Branch und gleichzeitig Wechsel auf den neuen Branch !funktioiniert nicht bei vorhandenem Branch!
+
+Merge -> Branches zusammenführen
+git merge <branchname> Hinzufügen des Branches gem. Branchname zur derzeit aktuellen Branch (ggf. vorher anpassen z.B. auf Master wechseln)
