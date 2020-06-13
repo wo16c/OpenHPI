@@ -1,50 +1,80 @@
-Verzeichnis-Befehle in GIT V.8
-
+Verzeichnis-Befehle in GIT V.9
+=================================================================
 pwd - print working directory
 cd change directory
 ls list
 cd ~ - Heimatverzeichnis
-
+=================================================================
 GIT Konfigurationsdatei ansehen, anpassen
 git config --list - GIT Konfigurationsdatei anzeigen
 git config -- global user.email - Email in Konfigurationsdatei setzen
 git config -- global user.name - -User Name in Konfigurationsdatei setzen
-
+=================================================================
 Repositorys erstellen und Dateien verwalten
 git init - erstellt GIT-Repository
 git status - Status des Repository anzeigen
 git add . - alle Dateien zum Repository hinzufügen
 git add dateiname.endung - definierte Datei zum Index hinzufügen
 git commit -m "Kommentar" - Änderungen am Repository aufzeigen
-
+=================================================================
+Korrekturen:
+git commit --amend (Kommentaränderung über Texteditor)
+git commit --amend -m "neuer/geänderter Kommentar"
+git reset HEAD <dateiname.txt> Datei wird aus dem Staging-Bereich entfernt.
+git checkout -- <dateianme.txt> Änderungen im Arbeitsverzeichnis verwerfen !Achtung: unwiederbringlich!
+=================================================================
 Repository Online stellen
 git remote add <alias> <url>(z.B. add repo http://github.copm/repo) - Repository online stellen
 git remote rename <alias> <neuer alias> (z.B. repo projekt1) - Repository umbenennen 
 git remote rm <alias> (rm = remove; entfernen) - Repsoitory entfernen
 git remote rm -f (-f = force - Löschen erzwingen)
-
+=================================================================
 Respository zum bearbeiten "holen"
 git clone <url> <alias> (z.B. https://github.com/repo repo) - Vollständige Kopie fastaller Dateien
-
+=================================================================
 Änderungen am Repository Online weiterleiten
 git push origin/<branch> (z.B. origin/master) - Änderungen an das Online-Repository schicken
-
+=================================================================
 Änderungen aus dem Online-Repository holen
 git fetch origin 
 git merge origin/<branch> (z.B. origin/master) - Änderungen aus dem Online-Repository holen
 git pull (git fetch + git merge)
-
-
+=================================================================
 Hinweise:
 Mit dem Befehl git rm geheim.jpg wird die Datei auch aus dem Arbeitsverzeichnis entfernt, also gelöscht.
 Um die Datei aus der Versionsverwaltung zu entfernen, aber auf der Festplatte zu behalten nutzt man git rm --cached geheim.jpg.
-
 Falls die Datei nur aus der Staging Area entfernt werden soll, nutzt man git reset HEAD -- geheim.jpg
-
+=================================================================
 Branches und HEADS
 git branch <name> erstellen einer neuen branch
 git checkout <branchname> Wechsel des HEAD auf einen anderen Branch
--> git checkout -b <branchname> Neuanlage Branch und gleichzeitig Wechsel auf den neuen Branch !funktioiniert nicht bei vorhandenem Branch!
-
+-> git checkout -b <branchname> Neuanlage Branch und gleichzeitig Wechsel auf den neuen Branch !funktioniert nicht bei vorhandenem Branch!
+=================================================================
 Merge -> Branches zusammenführen
 git merge <branchname> Hinzufügen des Branches gem. Branchname zur derzeit aktuellen Branch (ggf. vorher anpassen z.B. auf Master wechseln)
+=================================================================
+Grafischer Git-Repository-Browser
+gitk 
+=================================================================
+Übersicht der Änderungen im Repository (Verlassen der Übersicht mit q+Enter)
+git log
+git log -p (oder --patch) Anzeige des Unterschieds
+git log -2 (-n) letzte Einträge gem. Vorgabe - 2 oder n)
+git log --stat Statistik zu den Commits
+git log --pretty Commits anders formatiert anzeigen
+git log --graph Commithistorie mit Graphen (z.B. Mergekonflikt)
+git log --graph --decorate --online Commithostorie mit Graphen in komprimierter Form
+=================================================================
+Reset auf Commits
+git reset HEAD~ Reset auf den vorherigen Commit (default)
+git reset HEAD~~ Reset auf den vor-vorherigen Commit
+Version 1: git reset --soft HEAD~ Zurücksetzen von HEAD/master auf a) die vorherige Repository-Version
+Version 2: git reset --mixed HEAD~ Zurücksetzen von HEAD/master auf a) vorherige Repository-Vers. und b) vorherige Version der Staging-Area
+Version 3: git reset --hard HEAD~ Zurücksetzen von HEAD/master auf vorheriges a) Repository, b) Staging-Area, c) Arbeitsverzeichnis
+
+		Was bewegt sich?	Staging-Area	Arbeitsverz.	Sicher?
+reset --soft	Branch			Nein		Nein		Ja
+reset --mixed	Branch			Ja		Nein		Ja
+reset --hard	Branch			Ja		Ja		NEIN
+=================================================================
+
