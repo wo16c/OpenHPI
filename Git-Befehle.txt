@@ -1,4 +1,4 @@
-Verzeichnis-Befehle in GIT V.9
+Verzeichnis-Befehle in GIT V.10
 =================================================================
 pwd - print working directory
 cd change directory
@@ -76,5 +76,11 @@ Version 3: git reset --hard HEAD~ Zurücksetzen von HEAD/master auf vorheriges a
 reset --soft	Branch			Nein		Nein		Ja
 reset --mixed	Branch			Ja		Nein		Ja
 reset --hard	Branch			Ja		Ja		NEIN
+=================================================================
+Verschiedene Versionen, in der Datei einen Schritt zurück zu gehen...
+git restore --staged <Dateiname> Datei wird aus der staging-area zurückversetzt in das working directory
+git reset HEAD -- <Dateiname> Die Datei wird in den Zustand des vorsletzten commit versetzt, d. h. die Änderungen verschwinden
+git rm -- cached <Dateiname> Die Datei wurd nicht mehr von Git verfolgt/getrackt
+git rm <Dateiname> Datei wird unwiederbringlich gelöscht
 =================================================================
 
